@@ -1,0 +1,164 @@
+/* General Styling */
+body {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background: radial-gradient(circle, #ff9a9e, #fad0c4);
+  color: #333;
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Centered Layout */
+.centered {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Compact Selector and Button Styling */
+#grid-size {
+  padding: 8px;
+  font-size: 1rem;
+  border-radius: 10px;
+  border: none;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 120px;
+}
+
+.start-btn {
+  margin-top: 15px;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  font-size: 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
+}
+
+/* Game Section */
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+  background: linear-gradient(135deg, #f6d365, #fda085);
+  font-size: 1.2rem;
+}
+
+
+
+#puzzle-container {
+  display: grid;
+  gap: 3px;
+  margin: 20px auto;
+  width: 350px;
+  height: 350px;
+  border: 5px solid #dd2476;
+  border-radius: 10px;
+}
+
+button {
+  padding: 12px 20px;
+  border-radius: 20px;
+  border: none;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  color: white;
+  cursor: pointer;
+}
+
+button:hover {
+  transform: scale(1.1);
+}
+
+/* File Upload Animation */
+.animated-button {
+  display: inline-block;
+  padding: 12px;
+  border: 2px dashed #dd2476;
+  border-radius: 15px;
+  cursor: pointer;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+#upload-image {
+  display: none;
+}
+#success-message {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none; /* Initially hidden */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensure it is on top */
+  background: linear-gradient(135deg, #ff512f, #dd2476, #24c6dc, #ff8c00);
+  background-size: 400% 400%; /* Larger background for smooth animation */
+  animation: gradient-shift 6s infinite; /* Animated background */
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+#success-message h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  background: rgba(255, 255, 255, 0.2); /* Frosted glass effect for text */
+  backdrop-filter: blur(10px);
+  padding: 15px 30px;
+  border-radius: 10px;
+  color: white;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#success-message button {
+  padding: 12px 20px;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #7F00FF, #E100FF, #ff8c00, #ff0080);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+  margin-top: 20px;
+}
+
+#success-message button:hover {
+  transform: scale(1.1);
+  background: linear-gradient(135deg, #E100FF, #ff8c00, #7F00FF, #ff0080);
+}
+
+/* Keyframes for animated background */
+@keyframes gradient-shift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
